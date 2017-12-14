@@ -2,10 +2,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import static java.nio.file.Files.readAllLines;
 
 
-public class ListTasks {
+public class Task {
     private Path filePath = Paths.get("../TodoList");
     private List<String> todoList = new ArrayList<>();
 
@@ -23,19 +22,5 @@ public class ListTasks {
 
     public void setTodoList(List<String> todoList) {
         this.todoList = todoList;
-    }
-
-    public void readFile() {
-        try {
-            List<String> lines = readAllLines(getFilePath());
-            if (lines.size() < 1) {
-                System.out.println("No todos for today! :)");
-            } else {
-                //todo lines should be costumized
-                System.out.println(lines);
-            }
-        } catch (Exception e) {
-            System.out.println("Unable to read file: " + getFilePath());
-        }
     }
 }
