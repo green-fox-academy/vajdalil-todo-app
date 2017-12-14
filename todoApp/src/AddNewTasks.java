@@ -13,6 +13,5 @@ public class AddNewTasks extends  ListTasks{
         } catch (Exception e) {
             System.out.println("Unable to add: no task provided");
         }
-
     }
 }

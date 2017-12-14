@@ -6,7 +6,7 @@ import static java.nio.file.Files.readAllLines;
 
 
 public class ListTasks {
-    private Path filePath = Paths.get("TodoList");
+    private Path filePath = Paths.get("../TodoList");
     private List<String> todoList = new ArrayList<>();
 
     public Path getFilePath() {
@@ -28,7 +28,7 @@ public class ListTasks {
     public void readFile() {
         try {
             List<String> lines = readAllLines(getFilePath());
-            if (lines.size() == 0) {
+            if (lines.size() < 1) {
                 System.out.println("No todos for today! :)");
             } else {
                 //todo lines should be costumized

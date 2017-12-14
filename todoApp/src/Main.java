@@ -1,15 +1,10 @@
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
 
 public static void main(String[] args) {
 
-    ListTaskscd ..
-    todoThis = new ListTasks();
+    ListTasks todoList = new ListTasks();
 
+    //this is working
     if (args.length == 0) {
         System.out.println("Command Line Todo application\n" +
                         "=============================\n" +
@@ -23,12 +18,13 @@ public static void main(String[] args) {
     else if (args.length > 0) {
         for (int i = 0; i < args.length; i++) {
             System.out.println("Argument " + i + ": " + args[i]);
-
         }
         if (args[0].equals("-l")) {
 
         }else if (args[0].equals("-a")) {
-            System.out.println("Here should be a function that adds " + args[1] + " todo to your list.");
+            System.out.println("Here should be a function that adds " + args[0] + " todo to your list.");
+            //empty list is working
+            todoList.readFile();
         }
 
         }else if (args[0].equals("-r")) {
