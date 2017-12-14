@@ -7,7 +7,8 @@ public class Main {
 
 public static void main(String[] args) {
 
-    ListTasks todoThis = new ListTasks();
+    ListTaskscd ..
+    todoThis = new ListTasks();
 
     if (args.length == 0) {
         System.out.println("Command Line Todo application\n" +
