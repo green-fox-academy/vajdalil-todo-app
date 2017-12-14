@@ -24,7 +24,7 @@ public class Main {
             //List all tasks
             if (args[0].equals("-l")) {
                 todo.readFile();
-                //empty list is working
+                //this is working
             }
 
 
@@ -32,12 +32,13 @@ public class Main {
             else if (args[0].equals("-a")) {
                 todo.getInputToTaskToFile(args);
                 todo.readFile();
-
+                //this is working
             }
 
 
             //Removes a task
             else if (args[0].equals("-r")) {
+                todo.removeTask(args);
             }
 
 
