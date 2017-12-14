@@ -30,7 +30,7 @@ public class Main {
 
             //Adds a new task
             else if (args[0].equals("-a")) {
-                todo.getInputToTaskList(args);
+                todo.getInputToTaskToFile(args);
                 todo.readFile();
 
             }

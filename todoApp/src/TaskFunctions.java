@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardOpenOption;
 import java.util.List;
@@ -13,15 +14,18 @@ public class TaskFunctions extends Task {
             if (lines.size() < 1) {
                 System.out.println("No todos for today! :)");
             } else {
-                System.out.println(lines);
+                for (int i = 0; i < lines.size(); i++) {
+                    System.out.println( i + 1 + " - " + lines.get(i).toString());
+                }
             }
-        } catch (Exception e) {
+        }
+        catch (IOException e) {
             System.out.println("Unable to read file: " + getFilePath());
         }
     }
     public void getInputToTaskToFile(String[] args) {
         for (int i = 1; i < args.length; i++) {
-            getTodoList().add(args[i]);
+            getTodoList().add(String.valueOf(args[i]));
         }
         try {
             Files.write(getFilePath(), getTodoList(), StandardOpenOption.APPEND);
