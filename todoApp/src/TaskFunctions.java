@@ -1,4 +1,3 @@
-import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -12,6 +11,7 @@ import static java.nio.file.Files.readAllLines;
 public class TaskFunctions {
     private Path filePath = Paths.get("../TodoList");
     private List<String> todoList = new ArrayList<>();
+    private List<String> taskIsDoneOrNotChangeToString = new ArrayList<String>();
 
     public void readFile() {
         try {
@@ -60,7 +60,9 @@ public class TaskFunctions {
         catch (Exception e) {
             System.out.println("Unable to remove: index is not a number");
         }
+    }
 
-
+    //todo create the check task!!!!
+    public void checkIfDoneOrNot (String[] args) {
     }
 }
