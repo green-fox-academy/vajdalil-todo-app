@@ -39,8 +39,9 @@ public class Main {
             //Removes a task
             else if (args[0].equals("-r")) {
                 todo.removeTask(args);
+                todo.readFile();
+                //this is working
             }
-
 
             //Completes a task
             else if (args[0].equals("-c")) {

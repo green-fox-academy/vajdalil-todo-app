@@ -47,12 +47,9 @@ public class TaskFunctions {
             } else if (lines.size() < number) {
                 System.out.println("Unable to remove: index is out of bound");
             } else {
-                for (int i = 0; i < lines.size(); i++) {
-                    lines.remove(i + 1);
-                }
-                System.out.println(lines);
+                lines.remove(number - 1);
             }
-            Files.write(filePath,lines, StandardOpenOption.APPEND );
+            Files.write(filePath,lines);
         }
         catch (IOException e ) {
             System.out.println("Unable to read file: " + filePath);
