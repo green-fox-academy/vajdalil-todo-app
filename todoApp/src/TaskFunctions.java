@@ -56,13 +56,13 @@ public class TaskFunctions {
             catch (IOException e ) {
                 System.out.println("Unable to read file: " + filePath);
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("Unable to remove: index is not a number");
         }
     }
 
     //todo create the check task!!!!
     public void checkIfDoneOrNot (String[] args) {
+
     }
 }
